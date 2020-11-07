@@ -1,9 +1,9 @@
-<h1>{{name}}</h1>
-<div>
-    <ul>
-        <li><span>Capital:</span>{{capital}}</li> 
-        <li><span>Population:</span>{{population}}</li> 
-        <li><span>Languages:</span>
+<h1 class="name-c">{{name}}</h1>
+<div class="country">
+    <ul class="description">
+        <li><span class = "text">Capital:</span >{{capital}}</li> 
+        <li><span class="text">Population:</span>{{population}}</li> 
+        <li><span class="text">Languages:</span>
         
          <ul>
              {{#each languages}}
@@ -13,6 +13,7 @@
         </li>
     </ul>
     <ul>
-        <img src=" {{flag}} " alt=" {{name}} ">
+        <img class="flag" src=" {{flag}} " alt=" {{name}} ">
     </ul>
 </div>
+
