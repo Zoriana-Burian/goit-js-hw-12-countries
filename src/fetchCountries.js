@@ -1,10 +1,12 @@
-const BASE_URL = 'https://restcountries.eu/v2/rest/name';
+const BASE_URL = 'https://restcountries.eu/rest/v2/name';
 
 
-function fetchCounty(query) {
-    return fetch(`${BASE_URL}/${query}`).then(response =>
+
+
+export default function fetchCounty(searchQuery) {
+    return fetch(`${BASE_URL}/${searchQuery}`).then(response =>
       response.json()
     );
   }
   
-  export default {fetchCounty};
+  
