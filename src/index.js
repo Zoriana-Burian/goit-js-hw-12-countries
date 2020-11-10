@@ -35,7 +35,7 @@ function onSearch(e) {
 }
  
 function createMarkup(country, temp) {
-refs.container.insertAdjacentHTML('afterbegin',temp(country));
+refs.container.insertAdjacentHTML('afterbegin', temp(country));
 }
 
 function clearContainer() {
