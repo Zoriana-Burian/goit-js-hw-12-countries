@@ -3,9 +3,9 @@ import countryCard from '../templates/countries.hbs';
 import countriesListCard from '../templates/list-countries.hbs';
 import getRefs from './refs';
 import '@pnotify/core/dist/BrightTheme.css';
-
-const {error} = require('@pnotify/core');
-const debounce = require('lodash.debounce');
+import '@pnotify/core/dist/PNotify.css';
+import {error} from '@pnotify/core';
+import debounce from'lodash.debounce';
 
 const refs = getRefs();
 
@@ -16,6 +16,10 @@ function onSearch(e) {
    
     clearContainer();
     const searchQuery = refs.input.value;
+
+    if(!searchQuery){
+      return;
+    }
   
     fetchApiCountries(searchQuery)
         .then(renderCountry)
